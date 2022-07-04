@@ -1,0 +1,132 @@
+:root{
+    --dark-cyan: hsl(158, 36%, 37%);
+    --cream: hsl(30, 38%, 92%);
+    --dark-blue: hsl(212, 21%, 14%);
+    --grayish-blue: hsl(228, 12%, 48%);
+    --white: hsl(0, 0%, 100%);
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #F2E9E2;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 95vh;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    width: 550px;
+    min-height: 450px;
+    margin: auto;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.img{
+    background-image: url("images/image-product-desktop.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.details{
+    padding: 20px;
+}
+
+.img, .details{
+    width: 50%;
+    background-color: #FFF;
+}
+
+.category{
+    color: var(--grayish-blue);
+    letter-spacing: 0.15em; /* 2px */
+    font-weight:500;
+    margin: 0.625em 0 0.9375em 0;
+}
+h1{
+    font-family: 'Fraunces', serif;
+    line-height: 1;
+    margin: 0.625em 0 0.625em 0;
+}
+
+.text{
+    font-size: 14px;
+    color: var(--grayish-blue);
+    font-weight:500;
+    line-height: 1.5;
+    padding: 0.625em 0 0.625em 0;
+}
+
+.price{
+    color: var(--dark-cyan);
+    font-family: 'Fraunces', serif; 
+    font-weight: 700;
+    font-size: 32px;  
+    margin: 20px 0;
+}
+
+.price >span{
+    font-size: 12px;
+    font-weight: 300;
+    vertical-align: 12px;
+    text-decoration: line-through;
+    margin-left: 20px;
+    color: var(--grayish-blue);
+}
+
+button{
+    padding: 15px 20px;
+    margin-top: 15px;
+    width: 100%;
+    color: var(--white);
+    background-color: var(--dark-cyan);
+    border: none;
+    border-radius: 5px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+
+
+button:hover, button:active{
+    background-color: var(--dark-blue);
+    cursor: pointer;
+}
+
+.cart{
+    color: var(--white);
+    padding-right: 10px;
+}
+
+
+@media (max-width: 376px){
+    body{
+        display: flex;
+        flex-direction: column;
+        min-height: 100%;
+    }
+
+    .container{
+        margin: 20px 15px;
+        display: flex;
+        flex-direction: column;
+        max-width: 300px;
+        min-height: 100vh;
+    }
+    
+    .img, .details{
+        min-width: 100%;
+        min-height: 300px;
+    }
+}
